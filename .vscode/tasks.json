@@ -76,6 +76,20 @@
                 "showReuseMessage": false,
                 "focus": false
             }
+        },
+        {
+            "label": "Kill Debug",
+            "type": "shell",
+            "command": "taskkill /F /IM openocd.exe; taskkill /F /IM riscv32-wch-elf-gdb.exe",
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false,
+                "focus": false
+            },
+            "problemMatcher": []
         }
     ]
 }

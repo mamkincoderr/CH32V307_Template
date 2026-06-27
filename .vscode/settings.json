@@ -38,6 +38,13 @@
             "tooltip": "Очистить + собрать заново",
             "alignment": "left",
             "color": "default"
+        },
+        {
+            "label": "$(debug-stop)  Стоп",
+            "task": "Kill Debug",
+            "tooltip": "Принудительно остановить OpenOCD и GDB",
+            "alignment": "left",
+            "color": "#F44747"
         }
     ],
     "terminal.integrated.defaultProfile.windows": "PowerShell",
