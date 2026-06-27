@@ -80,15 +80,20 @@
         {
             "label": "Kill Debug",
             "type": "shell",
-            "command": "taskkill /F /IM openocd.exe; taskkill /F /IM riscv32-wch-elf-gdb.exe",
+            "command": "taskkill /F /IM openocd.exe 2>$null; taskkill /F /IM riscv32-wch-elf-gdb.exe 2>$null; exit 0",
             "options": { "cwd": "${workspaceFolder}" },
             "presentation": {
-                "reveal": "always",
+                "reveal": "silent",
                 "panel": "shared",
-                "clear": true,
-                "showReuseMessage": false,
-                "focus": false
+                "clear": false,
+                "showReuseMessage": false
             },
+            "problemMatcher": []
+        },
+        {
+            "label": "Debug: подготовить",
+            "dependsOn": ["Kill Debug", "Build"],
+            "dependsOrder": "sequence",
             "problemMatcher": []
         }
     ]

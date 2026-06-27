@@ -16,8 +16,8 @@
             "gdbPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gdb.exe",
             "svdFile": "${workspaceFolder}/doc/CH32V307.svd",
             "runToEntryPoint": "main",
-            "showDevDebugOutput": "raw",
-            "preLaunchTask": "Build",
+            "showDevDebugOutput": "parsed",
+            "preLaunchTask": "Debug: подготовить",
             "sourcePaths": [
                 "${workspaceFolder}/User",
                 "${workspaceFolder}/User/Lib",
