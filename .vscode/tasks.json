@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.bat",
+            "args": ["build"],
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"],
+            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
+            "presentation": { "reveal": "silent", "panel": "shared" }
+        },
+        {
+            "label": "Clean",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.bat",
+            "args": ["clean"],
+            "group": "build",
+            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
+            "presentation": { "reveal": "silent", "panel": "shared" }
+        },
+        {
+            "label": "Rebuild",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.bat",
+            "args": ["rebuild"],
+            "group": "build",
+            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
+            "presentation": { "reveal": "silent", "panel": "shared" }
+        },
+        {
+            "label": "Flash",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.bat",
+            "args": ["flash"],
+            "dependsOn": "Build",
+            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "Configure",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.bat",
+            "args": ["configure"],
+            "group": "build",
+            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
+            "presentation": { "reveal": "silent", "panel": "shared" }
+        }
+    ]
+}

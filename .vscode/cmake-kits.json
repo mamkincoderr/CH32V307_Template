@@ -1,0 +1,26 @@
+[
+    {
+        "name": "GCC 15.2.0 — MRS2",
+        "compilers": {
+            "C": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gcc.exe"
+        },
+        "preferredGenerator": { "name": "Ninja" },
+        "isTrusted": true
+    },
+    {
+        "name": "GCC 12.2.0 — MRS2",
+        "compilers": {
+            "C": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC12/bin/riscv-wch-elf-gcc.exe"
+        },
+        "preferredGenerator": { "name": "Ninja" },
+        "isTrusted": true
+    },
+    {
+        "name": "GCC 8.2.0 — MRS2",
+        "compilers": {
+            "C": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC/bin/riscv-none-embed-gcc.exe"
+        },
+        "preferredGenerator": { "name": "Ninja" },
+        "isTrusted": true
+    }
+]

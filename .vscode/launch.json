@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug CH32V307 (GCC15)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/obj/CH32V307_Template.elf",
+            "servertype": "openocd",
+            "serverpath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/OpenOCD/OpenOCD/bin/openocd.exe",
+            "configFiles": [
+                "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/OpenOCD/OpenOCD/bin/wch-riscv.cfg"
+            ],
+            "toolchainPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin",
+            "gdbPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gdb.exe",
+            "svdFile": "${workspaceFolder}/doc/CH32V307.svd",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "raw",
+            "sourcePaths": [
+                "${workspaceFolder}/User",
+                "${workspaceFolder}/User/Lib",
+                "${workspaceFolder}/Core",
+                "${workspaceFolder}/Debug",
+                "${workspaceFolder}/Peripheral/src",
+                "${workspaceFolder}/Startup"
+            ],
+            "preLaunchCommands": [
+                "set mem inaccessible-by-default off"
+            ],
+            "postRestartCommands": [
+                "monitor reset halt",
+                "load"
+            ]
+        },
+        {
+            "name": "Flash CH32V307",
+            "type": "shell",
+            "request": "launch",
+            "program": "C:\\MounRiver\\MounRiver_Studio2\\resources\\app\\resources\\win32\\components\\WCH\\OpenOCD\\OpenOCD\\bin\\openocd.exe",
+            "args": [
+                "-f", "C:\\MounRiver\\MounRiver_Studio2\\resources\\app\\resources\\win32\\components\\WCH\\OpenOCD\\OpenOCD\\bin\\wch-riscv.cfg",
+                "-c", "program ${workspaceFolder}/obj/CH32V307_Template.hex verify reset exit"
+            ],
+            "cwd": "${workspaceFolder}/obj",
+            "preLaunchTask": "Build"
+        }
+    ]
+}

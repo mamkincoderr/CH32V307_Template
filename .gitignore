@@ -1,0 +1,11 @@
+obj/
+CMakeUserPresets.json
+*.elf
+*.hex
+*.bin
+*.map
+*.d
+*.o
+.cache/
+.DS_Store
+Thumbs.db

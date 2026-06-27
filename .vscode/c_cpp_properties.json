@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "CH32V307",
+            "includePath": [
+                "${workspaceFolder}/User",
+                "${workspaceFolder}/User/Lib",
+                "${workspaceFolder}/Core",
+                "${workspaceFolder}/Debug",
+                "${workspaceFolder}/Peripheral/inc",
+                "${workspaceFolder}/Ld"
+            ],
+            "defines": [
+                "USE_STDPERIPH_DRIVER",
+                "CH32V30x_D8C",
+                "USE_FPU"
+            ],
+            "compilerPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-gcc-arm"
+        }
+    ],
+    "version": 4
+}

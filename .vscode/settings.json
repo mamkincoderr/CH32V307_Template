@@ -1,0 +1,28 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.ignoreCMakeListsMissing": true,
+    "cmake.configureOnOpen": false,
+    "cmake.autoSelectActiveFolder": true,
+    "cmake.options.statusBarVisibility": "hidden",
+    "cmake.useCMakePresets": "always",
+    "C_Cpp.debugShortcut": false,
+    "C_Cpp.default.compilerPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gcc.exe",
+    "cortex-debug.gdbPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15/bin/riscv32-wch-elf-gdb.exe",
+    "cortex-debug.openocdPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/OpenOCD/OpenOCD/bin/openocd.exe",
+    "cortex-debug.variableUseNaturalFormat": true,
+    "VsCodeTaskButtons.tasks": [
+        {"label": "$(tools) Build",    "task": "Build",     "tooltip": "Собрать проект (GCC15)",       "alignment": "left", "color": "default"},
+        {"label": "$(zap) Flash",      "task": "Flash",     "tooltip": "Прошить CH32V307 через OpenOCD","alignment": "left", "color": "default"},
+        {"label": "$(trash) Clean",    "task": "Clean",     "tooltip": "Очистить obj/",               "alignment": "left", "color": "default"},
+        {"label": "$(refresh) Rebuild","task": "Rebuild",   "tooltip": "Полная пересборка",            "alignment": "left", "color": "default"}
+    ],
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.ld": "plaintext",
+        "*.hex": "binary",
+        "*.bin": "binary"
+    },
+    "python.terminal.activateEnvironment": false,
+    "python.terminal.envFile": ""
+}

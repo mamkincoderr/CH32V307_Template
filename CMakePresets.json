@@ -1,0 +1,45 @@
+{
+    "version": 3,
+    "cmakeMinimumRequired": { "major": 3, "minor": 20, "patch": 0 },
+    "configurePresets": [
+        {
+            "name": "gcc15",
+            "displayName": "GCC 15.2.0 — MRS2 (riscv32-wch-elf)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/obj",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchain.cmake"
+            },
+            "environment": {
+                "RISCV_TOOLCHAIN": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC15",
+                "RISCV_PREFIX": "riscv32-wch-elf-"
+            }
+        },
+        {
+            "name": "gcc12",
+            "displayName": "GCC 12.2.0 — MRS2 (riscv-wch-elf)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/obj",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchain.cmake"
+            },
+            "environment": {
+                "RISCV_TOOLCHAIN": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC12",
+                "RISCV_PREFIX": "riscv-wch-elf-"
+            }
+        },
+        {
+            "name": "gcc8",
+            "displayName": "GCC 8.2.0 — MRS2 (riscv-none-embed)",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/obj",
+            "cacheVariables": {
+                "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/cmake/toolchain.cmake"
+            },
+            "environment": {
+                "RISCV_TOOLCHAIN": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/Toolchain/RISC-V Embedded GCC",
+                "RISCV_PREFIX": "riscv-none-embed-"
+            }
+        }
+    ]
+}
