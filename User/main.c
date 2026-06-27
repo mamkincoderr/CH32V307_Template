@@ -16,7 +16,7 @@ int main(void)
     SystemCoreClockUpdate();
     Delay_Init();
     Tick_Init();
-    USART_Printf_Init(115200);
+    SDI_Printf_Enable();
 
     printf("CH32V307 Template ready. SysClk=%lu Hz\r\n", (unsigned long)SystemCoreClock);
 

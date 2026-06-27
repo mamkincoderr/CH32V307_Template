@@ -20,6 +20,9 @@ if(USE_OOCD)
     add_definitions(-DOOCD_ENABLE)
 endif()
 
+# SDI printf: вывод через WCH-Link (Debug Console в VSCode), не занимает UART
+add_definitions(-DSDI_PRINT=1)
+
 # ---- Исходники ----
 file(GLOB USER_SOURCES   CONFIGURE_DEPENDS "User/*.c" "User/Lib/*.c")
 file(GLOB PERIPH_SOURCES CONFIGURE_DEPENDS "Peripheral/src/*.c")
