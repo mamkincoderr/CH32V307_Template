@@ -17,6 +17,7 @@
             "svdFile": "${workspaceFolder}/doc/CH32V307.svd",
             "runToEntryPoint": "main",
             "showDevDebugOutput": "raw",
+            "preLaunchTask": "Build",
             "sourcePaths": [
                 "${workspaceFolder}/User",
                 "${workspaceFolder}/User/Lib",
@@ -32,18 +33,6 @@
                 "monitor reset halt",
                 "load"
             ]
-        },
-        {
-            "name": "Flash CH32V307",
-            "type": "shell",
-            "request": "launch",
-            "program": "C:\\MounRiver\\MounRiver_Studio2\\resources\\app\\resources\\win32\\components\\WCH\\OpenOCD\\OpenOCD\\bin\\openocd.exe",
-            "args": [
-                "-f", "C:\\MounRiver\\MounRiver_Studio2\\resources\\app\\resources\\win32\\components\\WCH\\OpenOCD\\OpenOCD\\bin\\wch-riscv.cfg",
-                "-c", "program ${workspaceFolder}/obj/CH32V307_Template.hex verify reset exit"
-            ],
-            "cwd": "${workspaceFolder}/obj",
-            "preLaunchTask": "Build"
         }
     ]
 }
