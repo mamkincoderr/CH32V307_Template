@@ -4,48 +4,78 @@
         {
             "label": "Build",
             "type": "shell",
-            "command": "${workspaceFolder}/build.bat",
+            "command": "${workspaceFolder}\\build.bat",
             "args": ["build"],
             "group": { "kind": "build", "isDefault": true },
             "problemMatcher": ["$gcc"],
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
-            "presentation": { "reveal": "silent", "panel": "shared" }
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false,
+                "focus": false
+            }
         },
         {
             "label": "Clean",
             "type": "shell",
-            "command": "${workspaceFolder}/build.bat",
+            "command": "${workspaceFolder}\\build.bat",
             "args": ["clean"],
             "group": "build",
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
-            "presentation": { "reveal": "silent", "panel": "shared" }
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false,
+                "focus": false
+            }
         },
         {
             "label": "Rebuild",
             "type": "shell",
-            "command": "${workspaceFolder}/build.bat",
+            "command": "${workspaceFolder}\\build.bat",
             "args": ["rebuild"],
             "group": "build",
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
-            "presentation": { "reveal": "silent", "panel": "shared" }
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false,
+                "focus": false
+            }
         },
         {
             "label": "Flash",
             "type": "shell",
-            "command": "${workspaceFolder}/build.bat",
+            "command": "${workspaceFolder}\\build.bat",
             "args": ["flash"],
             "dependsOn": "Build",
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
-            "presentation": { "reveal": "always", "panel": "shared" }
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": false,
+                "showReuseMessage": false,
+                "focus": true
+            }
         },
         {
             "label": "Configure",
             "type": "shell",
-            "command": "${workspaceFolder}/build.bat",
+            "command": "${workspaceFolder}\\build.bat",
             "args": ["configure"],
             "group": "build",
-            "options": { "cwd": "${workspaceFolder}", "shell": { "executable": "cmd.exe", "args": ["/c"] } },
-            "presentation": { "reveal": "silent", "panel": "shared" }
+            "options": { "cwd": "${workspaceFolder}" },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "showReuseMessage": false,
+                "focus": false
+            }
         }
     ]
 }

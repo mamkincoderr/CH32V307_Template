@@ -11,11 +11,36 @@
     "cortex-debug.openocdPath": "C:/MounRiver/MounRiver_Studio2/resources/app/resources/win32/components/WCH/OpenOCD/OpenOCD/bin/openocd.exe",
     "cortex-debug.variableUseNaturalFormat": true,
     "VsCodeTaskButtons.tasks": [
-        {"label": "$(tools) Build",    "task": "Build",     "tooltip": "Собрать проект (GCC15)",       "alignment": "left", "color": "default"},
-        {"label": "$(zap) Flash",      "task": "Flash",     "tooltip": "Прошить CH32V307 через OpenOCD","alignment": "left", "color": "default"},
-        {"label": "$(trash) Clean",    "task": "Clean",     "tooltip": "Очистить obj/",               "alignment": "left", "color": "default"},
-        {"label": "$(refresh) Rebuild","task": "Rebuild",   "tooltip": "Полная пересборка",            "alignment": "left", "color": "default"}
+        {
+            "label": "$(tools)  Собрать",
+            "task": "Build",
+            "tooltip": "CMake + Ninja сборка (GCC 15)",
+            "alignment": "left",
+            "color": "default"
+        },
+        {
+            "label": "$(zap)  Прошить",
+            "task": "Flash",
+            "tooltip": "Собрать и прошить CH32V307 через WCH-Link",
+            "alignment": "left",
+            "color": "#4EC9B0"
+        },
+        {
+            "label": "$(trash)  Очистить",
+            "task": "Clean",
+            "tooltip": "Удалить obj/ (очистить)",
+            "alignment": "left",
+            "color": "#808080"
+        },
+        {
+            "label": "$(debug-restart)  Пересобрать",
+            "task": "Rebuild",
+            "tooltip": "Очистить + собрать заново",
+            "alignment": "left",
+            "color": "default"
+        }
     ],
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
     "files.associations": {
         "*.h": "c",
         "*.c": "c",
