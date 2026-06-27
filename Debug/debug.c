@@ -187,9 +187,11 @@ __attribute__((used)) int _write(int fd, char *buf, int size)
          *
          */
 
-        while( (*(DEBUG_DATA0_ADDRESS) != 0u))
+        /* timeout: ~1 ms at 144 MHz — silently drop if WCH-Link is absent */
+        uint32_t _t = 0xFFFF;
+        while( (*(DEBUG_DATA0_ADDRESS) != 0u) )
         {
-
+            if (!--_t) return size;
         }
 
         if(writeSize>7)
