@@ -10,9 +10,15 @@ option(USE_FPU  "Аппаратный FPU (требует rv32imafc)" ON)
 option(USE_SPL  "WCH Standard Peripheral Library"     ON)
 option(USE_OOCD "OOCD debug framework"                ON)
 
-if(USE_SPL)  add_definitions(-DUSE_STDPERIPH_DRIVER) endif()
-if(USE_FPU)  add_definitions(-DUSE_FPU)              endif()
-if(USE_OOCD) add_definitions(-DOOCD_ENABLE)          endif()
+if(USE_SPL)
+    add_definitions(-DUSE_STDPERIPH_DRIVER)
+endif()
+if(USE_FPU)
+    add_definitions(-DUSE_FPU)
+endif()
+if(USE_OOCD)
+    add_definitions(-DOOCD_ENABLE)
+endif()
 
 # ---- Исходники ----
 file(GLOB USER_SOURCES   CONFIGURE_DEPENDS "User/*.c" "User/Lib/*.c")
